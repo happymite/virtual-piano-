@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,4 +64,71 @@
 
   <script src="app.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Virtual Piano</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="main-container">
+    <header>
+      <h2 id="app-title">🎹 Virtual Piano</h2>
+      <div class="header-right">
+        <select class="song-select" id="song-sel">
+          <option value="">— pick a song —</option>
+          <option value="twinkle">Twinkle Twinkle</option>
+          <option value="happy">Happy Birthday</option>
+          <option value="sunraha">sun raha hai na tu</option>
+          <option value="ode">Ode to Joy</option>
+          <option value="scale">Major Scale</option>
+        </select>
+        <button class="song-btn" id="play-btn">▶ Play</button>
+        <button id="fun-btn">🤣 Fun Mode</button>
+        <button id="theme-btn">🎨 Theme</button>
+      </div>
+    </header>
+
+    <div class="controls" id="piano-controls">
+      <div class="ctrl-group">
+        <span class="ctrl-label">Volume</span>
+        <input type="range" id="vol" min="0" max="1" step="0.01" value="0.7" class="volumeslider" />
+        <span class="ctrl-val" id="vol-val">70%</span>
+      </div>
+      <div class="ctrl-group">
+        <span class="ctrl-label">Wave</span>
+        <select class="wave-sel" id="wave-type">
+          <option value="triangle" selected>Triangle</option>
+          <option value="sine">Sine</option>
+          <option value="square">Square</option>
+          <option value="sawtooth">Sawtooth</option>
+        </select>
+      </div>
+      <div class="ctrl-group">
+        <span class="ctrl-label">Octave</span>
+        <div class="oct-btns">
+          <button class="oct-btn" data-oct="3">3</button>
+          <button class="oct-btn active" data-oct="4">4</button>
+          <button class="oct-btn" data-oct="5">5</button>
+        </div>
+      </div>
+      <span id="song-status"></span>
+    </div>
+
+
+    <div class="meme-banner" id="meme-banner" style="display:none">
+       <strong>Fun Mode ON</strong> — each key plays a meme sound. Add your own in <code>memes/</code>!
+    </div>
+
+    <ul class="piano-keys" id="piano-wrap"></ul>
+
+    <p id="hint">Click keys or use keyboard shortcuts shown on each key</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+>>>>>>> ff5c3c9762e635ee6ad4fcbef424ed2af185932a
 </html>
